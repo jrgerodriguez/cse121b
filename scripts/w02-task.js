@@ -5,7 +5,7 @@
 /* Step 2 - Variables */
 const fullName = "Jorge Alberto Menjivar Rodriguez";
 var currentYear = "2023";
-const profilePicture = 'images/myprofilephoto.jpg';
+const profilePicture = "images/myprofilephoto.jpg";
 
 
 
@@ -14,7 +14,7 @@ const profilePicture = 'images/myprofilephoto.jpg';
 const nameElement = document.getElementById('name');
 const foodElement = document.getElementById('food');
 const yearElement = document.querySelector('#year');
-const imageElement = document.querySelector('img');
+const imageElement = document.querySelector("img");
 
 
 
