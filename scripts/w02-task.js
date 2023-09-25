@@ -5,7 +5,7 @@
 /* Step 2 - Variables */
 const fullName = "Jorge Alberto Menjivar Rodriguez";
 var currentYear = "2023";
-let profilePicture = "images/myprofilephoto.png";
+let profilePicture = "C:\Users\Admin\Desktop\byui\cse121b\images\myprofilephoto.png";
 
 
 
