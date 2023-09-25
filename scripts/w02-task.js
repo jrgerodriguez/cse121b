@@ -5,7 +5,7 @@
 /* Step 2 - Variables */
 const fullName = "Jorge Alberto Menjivar Rodriguez";
 var currentYear = "2023";
-let profilePicture = "C:\Users\Admin\Desktop\byui\cse121b\images\myprofilephoto.png";
+let profilePicture = "images/myprofilephoto.png";
 
 
 
@@ -22,8 +22,8 @@ const imageElement = document.querySelector('img');
 /* Step 4 - Adding Content */
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
 yearElement.textContext = currentYear;
-imageElement.setAttribute("src", profilePicture);
-imageElement.setAttribute("alt", `Profile image of ${fullName}`);
+imageElement.setAttribute('src', profilePicture);
+imageElement.setAttribute('alt', `Profile image of ${fullName}`);
 
 
 
