@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        const list = document.querySelector("ul"); // creamos una variable para la lista <ul>
+        const input = document.querySelector("input"); // creamos una variable para <input>
+        const button = document.querySelector("button"); // creamos una variable para <button>
+   
+        // ya tenemos estos elementos como referencia en <script> dentro de una variable
+
+        button.addEventListener('click', () => { //Este evento es para que el <button> (dentro de la variable button)
+            const itemGiven = input.value; //obtenga el valor de input cada vez que se le da click 
+            input.value = ''; //al hacerlo cambiara el valor a ""  
+
+
+            //Ahora vamos a crear elementos que estaran dentro del DOM que no se han creado en el HTML          
+    
+            const listItem = document.createElement("li"); //creamos <li> en una variable llamada listItem
+            const spanItem = document.createElement("span"); //creamos <span> en una variable llamada spanItem
+            const buttonItem = document.createElement("button"); //creamos <button> en una variable llamada buttonItem
+    
+            listItem.appendChild(spanItem); //Metemos el spanItem (<span>) en lisItem (el cual es <li>), o sea sera elementos de lista
+            spanItem.textContent = itemGiven; //spanItem (<span>) va a tomar su texto de itemGiven y recordando, itemGiven es el value del input
+            listItem.appendChild(buttonItem); //Vamos tambien a meter el boton que creamos (buttonItem) a listItem (que es <li>), significa que se va a crear un boton por cada elemento de <li>    
+            buttonItem.textContent = "Delete"; //el texto del botton va a ser "Delete"
+            list.appendChild(listItem); // para terminar vamos a meter lisItem (que es <li>) dentro de list (que es <ul>), o sea la lista principal que se va a mostrar
+    
+            //Aun no hemos agregado un evento al boton que dira "Delete"
+                        
+            buttonItem.addEventListener("click", () => { //Cuando se haga click en el boton "Delete", o sea (buttonItem)
+                list.removeChild(listItem); //se removera el listItem (<li>) de la lista que se despliegue
+            });        
+    
+            input.focus(); //Esto dejara apuntando a la barra donde ponemos el input al darle click al boton.
+
+        }); 
+    </script>
+  </body>
+</html>
