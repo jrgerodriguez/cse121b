@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result {
+        color: blue;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+</style>
+<body>
+    <label for="age">Current Age</label>
+    <input id="age" />
+    <label for="year">Current Year</label>
+    <input id="year" />
+    <button onclick="calculateAge()">Calculate it</button>
+    <p id="result"></p>
+    <script>
+        function calculateAge() {
+            const currentAge = document.getElementById("age").value;
+            const currentYear = document.getElementById("year").value;
+            const agePlus = parseInt(currentYear) - parseInt(currentAge);
+            document.getElementById("result").innerHTML = "Your year of birth is "+ agePlus;
+        }
+    </script>
+</body>
+</html>
