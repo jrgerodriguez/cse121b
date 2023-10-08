@@ -113,8 +113,9 @@ footer {
     padding: 15px;
     text-align: center;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
+    
 }
 
 /* Class Selectors */
@@ -159,3 +160,5 @@ footer {
 #quotient{
     margin-bottom: 50px;
 }
+
+
