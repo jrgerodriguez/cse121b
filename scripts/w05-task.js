@@ -2,57 +2,84 @@
 
 /* Declare and initialize global variables */
 //const url = "https://byui-cse.github.io/cse121b-ww-course/resources/temples.json";
-const templesElement = document.querySelector("#temples");
-templeList = [];
+const templesElement = document.getElementById("temples");
+const templeList = [];
 
 
 /* async displayTemples Function */
-
 const displayTemples = (temples) => {
-    temples.foreach((temple) => {
+        temples.forEach(temple => {
         const articleElement = document.createElement("article");
-        const h3Element = `<h3>${temple.templeName}<h3>`;
-        const imgElement = `<img src="${temple.imageUrl}" alt="Image of ${temple.templeName}">`;
+        const h3Element = document.createElement("h3");
+        h3Element.textContent = temple.templeName;
+        const imageElement = document.createElement("img");
+        imageElement.setAttribute("src", temple.imageUrl);
+        imageElement.setAttribute('alt', `Profile image of ${temple.templeName}`);
         articleElement.appendChild(h3Element);
-        articleElement.appendChild(imgElement);
+        articleElement.appendChild(imageElement);
         templesElement.appendChild(articleElement);
-    })
-}
+    });
+};
 
 
 /* async getTemples Function using fetch()*/
-
 const getTemples = async () => {
     const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
-    if (response.ok) {
-        const data = await response.json();
-        templeList.push(data);
-        displayTemples(templeList);        
-    }
-    
-} 
+    const data = await response.json();
+    templeList.push(...data);
+    displayTemples(templeList);    
+};
+
+getTemples()
 
 
 /* reset Function */
 const reset = () => {
-    document.getElementById("#temples").innerHTML="";
-}
+    document.getElementById("temples").innerHTML="";
+};
+
 
 /* sortBy Function */
-const sortBy = (templeList) => {
-    reset();
-    const filter = document.querySelector("#sortBy").value;
-    switch (filter) {
-        case 1:
-            displayTemples(filter)
-    }
+const selectElement = document.getElementById("sortBy");
 
-}
+selectElement.addEventListener("change", function () {
+
+    const filter = selectElement.value;
+    let filteredTemples = [];
+    switch(filter) {
+        case "utah":
+        filteredTemples = templeList.filter(temple => temple.location.includes("Utah"));
+        reset();
+        displayTemples(filteredTemples);
+        break;
+
+        case "notutah":
+        filteredTemples = templeList.filter(temple => ! temple.location.includes("Utah"));
+        reset();
+        displayTemples(filteredTemples);
+        break;
+
+        case "older":
+        filteredTemples = templeList.filter(temple => new Date(temple.dedicatedDate) < new Date(1950, 0, 1));
+        reset();
+        displayTemples(filteredTemples);
+        break;
+
+        case "all":
+        reset();
+        displayTemples(templeList);
+        break;
+
+    }});
 
 
-getTemples()
+        
+
 
 /* Event Listener */
  
 document.querySelector("#sortBy").addEventListener("change", () => { sortBy(templeList) });
+
+
+
 
