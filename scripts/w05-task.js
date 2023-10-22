@@ -42,7 +42,7 @@ const reset = () => {
 /* sortBy Function */
 const selectElement = document.getElementById("sortBy");
 
-selectElement.addEventListener("change", function () {
+function sortBy() {
 
     const filter = selectElement.value;
     let filteredTemples = [];
@@ -70,7 +70,7 @@ selectElement.addEventListener("change", function () {
         displayTemples(templeList);
         break;
 
-    }});
+    }};
 
 
         
