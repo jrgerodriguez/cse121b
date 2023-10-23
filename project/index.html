@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project - Compensation Calculator</title>
+</head>
+<body>
+    
+    <main>
+
+        <h2>Here you can calculate your compensation payment.</h2>
+        <h3>How does it work?</h3>
+        <p>Enter the information requited in the blanks.<br>
+        Please read carefully, if you have been working in the same company for less than two years, you are not eligible for this benefit.</p>
+
+
+        <select id="reason-list" title="Choose a data filter.">
+            <option value="" disabled selected>Reason for calculation</option>
+        </select>
+        <h3 id="message-display"></h3>
+
+
+        <section id="calculators">
+
+            <div>
+                <h4>Downsizing and Dismissal</h4>
+
+                <label for="salary">Whats is your monthly salary? (Include bonuses)</label><br>
+                <input type="text" id="salary" name="salary"><br>
+
+                <label for="years">Years working in current company</label><br>
+                <input type="text" id="years" name="years"><br>
+
+                <button id="get-first-result">Get Result</button><br>
+
+                <label for="first-result">You will receive $</label>
+                <input type="text" id="result-first-calculator" name="first-result" disabled>                
+            </div> 
+            
+            <div>
+                <h4>Resignation</h4>
+
+                <label for="salary2">Whats is your monthly salary? (Include bonuses)</label><br>
+                <input type="text" id="salary2" name="salary2"><br>
+
+                <label for="years2">Years working in current company</label><br>
+                <input type="text" id="years2" name="years2"><br>
+
+                <button id="get-second-result">Get Result</button><br>
+
+                <label for="second-result">You will receive $</label>
+                <input type="text" id="result-second-calculator" name="second-result" disabled>                
+            </div>
+
+            <!-- <div>
+                <h4>If your salary varies every month.</h4>
+                <p>Your salary will be the average of what you have earned in the last 6 months.<p>
+                
+                
+                <div id="months">
+                <label for="first-month">First Month</label>
+                <input type="text" id="first-month" name="first-month">
+
+                <label for="second-month">Second Month</label>
+                <input type="text" id="second-month" name="second-month"> 
+
+                <label for="third-month">Third Month</label>
+                <input type="text" id="thirds-month" name="third-month">
+
+                <label for="fourth-month">Fourth Month</label>
+                <input type="text" id="fourth-month" name="fourth-month">
+
+                <label for="fifth-month">Fifth Month</label>
+                <input type="text" id="fifth-month" name="fifth-month"> 
+
+                <label for="sixth-month">Sixth Month</label>
+                <input type="text" id="sixth-month" name="sixth-month">
+
+                <label for="average">Your salary average is $</label>
+                <input type="text" id="average" name="average" disabled> 
+                </div>  
+
+            </div>-->
+            
+        </section>
+
+    </main>
+    <script src="project.js" defer></script>
+            
+</body>
+</html>
+
