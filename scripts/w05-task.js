@@ -60,7 +60,7 @@ function sortBy() {
         break;
 
         case "older":
-        filteredTemples = templeList.filter(temple => new Date(temple.dedicatedDate) < new Date(1950, 0, 1));
+        filteredTemples = templeList.filter(temple => new Date(temple.dedicated) < new Date(1950, 0, 1));
         reset();
         displayTemples(filteredTemples);
         break;
