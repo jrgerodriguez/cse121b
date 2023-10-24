@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project - Compensation Calculator</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    
 </head>
 <body>
     
     <main>
 
-        <h2>Here you can calculate your compensation payment.</h2>
+        <h2>Calculate your compensation payment.</h2>
         <h3>How does it work?</h3>
         <p>Enter the information requited in the blanks.<br>
         Please read carefully, if you have been working in the same company for less than two years, you are not eligible for this benefit.</p>
@@ -23,8 +25,8 @@
 
         <section id="calculators">
 
-            <div>
-                <h4>Downsizing and Dismissal</h4>
+            <div id="first-calculator" style="display: none;">
+                <h3>Downsizing and Dismissal</h3>
 
                 <label for="salary">Whats is your monthly salary? (Include bonuses)</label><br>
                 <input type="text" id="salary" name="salary"><br>
@@ -34,12 +36,12 @@
 
                 <button id="get-first-result">Get Result</button><br>
 
-                <label for="first-result">You will receive $</label>
+                <label for="first-result"></label>
                 <input type="text" id="result-first-calculator" name="first-result" disabled>                
             </div> 
             
-            <div>
-                <h4>Resignation</h4>
+            <div id="second-calculator" style="display: none;">
+                <h3>Resignation</h3>
 
                 <label for="salary2">Whats is your monthly salary? (Include bonuses)</label><br>
                 <input type="text" id="salary2" name="salary2"><br>
@@ -49,45 +51,47 @@
 
                 <button id="get-second-result">Get Result</button><br>
 
-                <label for="second-result">You will receive $</label>
+                <label for="second-result"></label>
                 <input type="text" id="result-second-calculator" name="second-result" disabled>                
             </div>
 
-            <!-- <div>
-                <h4>If your salary varies every month.</h4>
-                <p>Your salary will be the average of what you have earned in the last 6 months.<p>
+            <div>
+                <h3>If your salary varies every month.</h3>
+                <p>Enter your salary of the last 6 months individually, the average will be calculated as your monthly salary.</p>
                 
                 
                 <div id="months">
                 <label for="first-month">First Month</label>
-                <input type="text" id="first-month" name="first-month">
+                <input type="text" id="first-month" name="first-month" value=""><br>
 
                 <label for="second-month">Second Month</label>
-                <input type="text" id="second-month" name="second-month"> 
+                <input type="text" id="second-month" name="second-month"><br> 
 
                 <label for="third-month">Third Month</label>
-                <input type="text" id="thirds-month" name="third-month">
+                <input type="text" id="third-month" name="third-month"><br>
 
                 <label for="fourth-month">Fourth Month</label>
-                <input type="text" id="fourth-month" name="fourth-month">
+                <input type="text" id="fourth-month" name="fourth-month"><br>
 
                 <label for="fifth-month">Fifth Month</label>
-                <input type="text" id="fifth-month" name="fifth-month"> 
+                <input type="text" id="fifth-month" name="fifth-month"><br> 
 
                 <label for="sixth-month">Sixth Month</label>
-                <input type="text" id="sixth-month" name="sixth-month">
+                <input type="text" id="sixth-month" name="sixth-month"><br>
 
-                <label for="average">Your salary average is $</label>
+                <button id="button-average">Get Average</button><br>
+
+                <label for="average"></label>
                 <input type="text" id="average" name="average" disabled> 
                 </div>  
 
-            </div>-->
+            </div>
             
         </section>
 
     </main>
-    <script src="project.js" defer></script>
-            
+         
+    <script src="project.js" type="module"></script>           
 </body>
 </html>
 
