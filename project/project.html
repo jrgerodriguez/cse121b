@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project - Compensation Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     
 </head>
@@ -11,12 +12,18 @@
     
     <main>
 
-        <h2>Calculate your compensation payment.</h2>
-        <h3>How does it work?</h3>
-        <p>Enter the information requited in the blanks.<br>
-        Please read carefully, if you have been working in the same company for less than two years, you are not eligible for this benefit.</p>
+        <h2 id="main-title">CALCULATE YOUR COMPENSATION PAYMENT</h2>
 
+        <div id="main-interaction-section">
 
+        <h3 id="question">How does it work?</h3>
+        <div  id="instructions-paragraph">
+        <p>Select a reason for calculation.</p>
+        <p>If you have been working in the same company for less than two years, you are not eligible for this benefit.</p>
+        <p>A calculator will be displayed based on your choice.</p>
+        </div>
+
+        
         <select id="reason-list" title="Choose a data filter.">
             <option value="" disabled selected>Reason for calculation</option>
         </select>
@@ -26,6 +33,7 @@
         <section id="calculators">
 
             <div id="first-calculator" style="display: none;">
+
                 <h3>Downsizing and Dismissal</h3>
 
                 <label for="salary">Whats is your monthly salary? (Include bonuses)</label><br>
@@ -54,40 +62,48 @@
                 <label for="second-result"></label>
                 <input type="text" id="result-second-calculator" name="second-result" disabled>                
             </div>
+        </div>
+        </section>        
+            
+            <div id="get-last-six-months">
 
-            <div>
-                <h3>If your salary varies every month.</h3>
-                <p>Enter your salary of the last 6 months individually, the average will be calculated as your monthly salary.</p>
-                
-                
-                <div id="months">
-                <label for="first-month">First Month</label>
-                <input type="text" id="first-month" name="first-month" value=""><br>
-
-                <label for="second-month">Second Month</label>
-                <input type="text" id="second-month" name="second-month"><br> 
-
-                <label for="third-month">Third Month</label>
-                <input type="text" id="third-month" name="third-month"><br>
-
-                <label for="fourth-month">Fourth Month</label>
-                <input type="text" id="fourth-month" name="fourth-month"><br>
-
-                <label for="fifth-month">Fifth Month</label>
-                <input type="text" id="fifth-month" name="fifth-month"><br> 
-
-                <label for="sixth-month">Sixth Month</label>
-                <input type="text" id="sixth-month" name="sixth-month"><br>
-
-                <button id="button-average">Get Average</button><br>
-
-                <label for="average"></label>
-                <input type="text" id="average" name="average" disabled> 
-                </div>  
+                <h3 id="salary-title">If your salary varies every month.</h3>
+                <p id="explanation-paragraph">Enter your salary of the last 6 months individually, the average will be taken as your monthly salary.</p>              
+        
+                    <section id="last-six-months">
+    
+                        <div id="months">
+        
+                            <label for="first-month">First Month</label>
+                            <input type="text" id="first-month" name="first-month" value=""><br>
+            
+                            <label for="second-month">Second Month</label>
+                            <input type="text" id="second-month" name="second-month"><br> 
+            
+                            <label for="third-month">Third Month</label>
+                            <input type="text" id="third-month" name="third-month"><br>
+            
+                            <label for="fourth-month">Fourth Month</label>
+                            <input type="text" id="fourth-month" name="fourth-month"><br>
+            
+                            <label for="fifth-month">Fifth Month</label>
+                            <input type="text" id="fifth-month" name="fifth-month"><br> 
+            
+                            <label for="sixth-month">Sixth Month</label>
+                            <input type="text" id="sixth-month" name="sixth-month"><br>
+        
+                        </div> 
+        
+                    <button id="button-average">Get Average</button><br>
+    
+                    <label for="average"></label>
+                    <input type="text" id="average" name="average" disabled> 
+                 
+                    </section>
 
             </div>
             
-        </section>
+        
 
     </main>
          

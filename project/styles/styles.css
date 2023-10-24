@@ -1,0 +1,162 @@
+html
+{
+    font-family: 'Inter', sans-serif;
+    text-align: center;  
+}
+
+main
+{
+    padding: 25px;
+}
+
+#main-title
+{  
+    font-size: 40px;
+    margin: 25px auto;
+    width: 75%;
+}
+
+#main-interaction-section
+{
+    background-color: #EECF6D;
+    padding: 50px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;   
+}
+
+#question, #salary-title
+{
+    font-size: 38px;
+}
+
+#instructions-paragraph
+{
+    width: 60%;
+    margin: 0 auto;
+    border: thin solid;
+    border-radius: 10px;
+    padding: 10px 100px;
+    font-size: 20px;
+    background-color: #C2EABD;
+}
+
+#reason-list
+{
+    text-align: center;
+    border: thin solid;
+    border-radius: 5px;
+    margin: 25px;
+    font-size: 16px;
+}
+
+#message-display
+{
+    width: 75%;
+    font-size: 25px;
+    margin: 0 auto;
+    color: #000500;
+}
+
+#calculators
+{
+    border: thin solid;
+    width: 50%;
+    height: 50%;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #C2EABD;
+}
+
+#salary, #years, #salary2, #years2 
+{
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    font-size: 17px;
+}
+
+#get-first-result, #get-second-result, #button-average
+{
+    margin: 10px auto;
+    padding: 8px 40px;
+    color: white;
+    font-weight: bold;
+    background-color: #0D1821;
+}
+
+#result-first-calculator, #result-second-calculator, #average
+{
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+
+#get-last-six-months
+{
+    background-color: #5DD599;
+    padding: 50px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 50px auto;   
+}
+
+#explanation-paragraph
+{
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px 100px;
+    font-size: 20px;
+    background-color: #C2EABD;
+    border: thin solid;
+}
+
+#months
+{
+    margin: 0 auto;
+    text-align: right;
+    width: 300px;  
+}
+
+#months #button-average, #average
+{
+    text-align: center;
+    margin: 0 auto;
+}
+
+#last-six-months
+{
+    border: thin solid;
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #C2EABD;
+}
+
+#months label
+{
+    font-weight: bold;
+}
+
+#months input
+{
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    font-size: 17px;    
+}
+
+#months label, input
+{
+    margin: 3px 0;
+}
+
